@@ -1857,6 +1857,7 @@ it.each([false, true])(
     const presence = {
       status: () => status,
       limited: () => false,
+      subscribeSelection: () => () => {},
       subscribe(key, listener) {
         const current = listeners.get(key) ?? new Set();
         current.add(listener);
